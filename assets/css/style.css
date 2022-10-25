@@ -1,0 +1,71 @@
+.dropdown1{
+    background-color:#17A2B8 !important;
+    border: 0 !important;
+}
+
+.likebutton{
+    margin-right: 3%;
+    font-size: 25px;
+    color: gray;
+}
+.like{
+    margin-right: 3%;
+    font-size: 25px;
+    color: blue;
+}
+#sebetalert{
+    background-color: rgba(0, 0, 0, 0.445);
+}
+#unlike{
+    margin-right: 3%;
+    font-size: 25px;
+    color: gray;
+    display: none;
+   
+    
+
+}
+#dropdown{
+    width: 250px;
+}
+
+.dropdowna{
+    display: flex !important;
+    justify-content: space-between;
+}
+.red{
+    color: red;
+    
+}
+#sebetdncx{
+    display: none;
+}
+#radius{
+    border-radius: 100%;
+    background-color: red;
+   width: 25px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   margin-bottom: 0;
+   margin-right: 10px;
+   
+}
+.slick img{
+    height: 300px;
+    width: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.slick{
+    width: 90%;
+    margin: auto;
+}
+.fso{
+    background-color: #17A2B8;
+    padding-top:45px ;
+    margin-top: 5%;
+}
+.fso h4{
+    margin-bottom: 45px;
+}

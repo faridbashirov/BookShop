@@ -1,0 +1,50 @@
+Day1
+What is the GIT?
+GIT is  distributed version control system,
+Why we use it?
+Git en cox istifade  edilern versiyaya nezaret sistemidir,yazdigimiz kodlari internetde bir
+cloud uzerinde saxlamagimiz ucun,isdediyimiz an deyiwiyleri gorduyumuz 
+ve ilk versiyaya qayida bildiyimiz ve boyuy lahiyelerde daha cox komeyimize catan,korporativ lahiyelerde kamandayla iwliyerken
+iwimizi asanlawdiran ve suretimizi artiran bir sistemdir.
+
+What is the GITHub?
+Github git-le iwleyen kodlarimizi depolamax ucun bir sistemdir,bulud depolama sistemide demey olar,ve proqramcilarin iwini asanlawdiran ,
+bir nece insanin bir proekt uzerinde iwiye bildiyi ve public ve yaxud private olaraq deyiwdire bildiyi bir bulut sistemidir.
+
+How the web browser works
+Web browserler her hansi bir sayta daxil olarken serverden web melumatlari gotrmey uucun istek gonderir ve bizim ekranimiza yansidir.
+
+
+What are HTML tags for?
+html taglari acilis ve baglanis taglari olan bir html elementidi,  ve html taglari web browsere html documentleri web sefelere cevirmeye komek edir.
+
+What are Attributes for?
+HTML elementlerin oz atibutlari olur ve bu atributlar iki hisseden name-vaule hisselerden ibaret olur
+ve acilis taglarinda yazilir bu atributlar.
+Day 2
+What does CSS do?
+ Acilimi “Cascading Style Sheets”  ve html sefelrini gorunum olaraq dahada tekmillewdirilmeyimize komey eliyir.
+What are CSS selectors for?
+Css selektorlar bize komey eliyirki isdediyimiz xususi elemtin styleni deyiwey,
+mes,selektorlara misal olaraq CLASS,ID gostermey olar.
+Day 3
+Why we need CSS reset?
+Elementleri  daha rahat olculerinde deyiwiyliy yerlrinde deyiwiyliy etmey ucun
+
+What are the advantages of using fonts instead of images as icons?
+Cunki wekiller sefede daha cox yer tutur ve yuklenmeyi gec olur iconlarin istifadesi ise daha rahatdi ve suretlidir
+Day 4
+What are the advantages of using Flex?
+Elementleri yan yana salmaq ucun
+Day 5
+What was the most interesting topic from what you have learned so far? (Why)
+Flexbox maraqli geldi cunki hem iwimizi asanlawdirir elementleri yan yana salmaq ucun hemde elementleri arasindaki mesafesini temzimlemey ucun
+What can you do with what you've learned so far?
+Elementleri rahat bir wekilde duze bilirem hem yan yana hem sutun weklinde arasindaki mesafeni duzgun vermey vs.
+DAY 7
+What is Bootstrap?
+Front-end frameworkudu  web seflerin qurulmasini suretlendirir hazir templateler sahesinde ve open source dir.
+
+How is it works?
+burda hazir css html ve javascript kodlari olur  ve bunlarida responsive web sefelrin hazirlanmasina komey eliyir.
+Could you create package like Bootstrap? How?

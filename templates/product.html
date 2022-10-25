@@ -1,0 +1,144 @@
+{% extends 'layout.html' %}
+{% from "_formhelpers.html" import render_field %}
+{%block css%}
+<link rel="stylesheet" type="text/css" href="{{url_for("static",filename="slick/slick.css")}}"/>
+<link rel="stylesheet" type="text/css" href="{{url_for("static",filename="slick/slick-theme.css")}}"/>
+<link rel="stylesheet" href="{{url_for("static",filename="css/style.css")}}">
+{%endblock%}
+{% block content %}
+      <div class="container">
+      <div class="main d-flex text-end mt-5">
+          <img width="300px" src="{{image}}" alt="">
+          <div class="price ps-5">
+              <h2> <span id="bookname">{{name}}</span>  (Beyini gizli heyati)</h2>
+              <p class="text-success"><b id="incognito">{{price}} AZN </b><del class="text-danger">{{old_price}} AZN</del></p>
+              <p >{{description}}</p>
+              <i id="like" class=" like fa-solid fa-thumbs-up"></i> <i id="unlike" class=" unlike fa-solid fa-thumbs-down"></i><i id="heartbtn" class="likebutton fa-solid fa-heart"></i> <button id="sebetelvt" type="button" class="sebet btn btn-secondary bg-info border-0" > Sebete elave et</button><button id="sebetdncx" type="button" class="sebet btn btn-secondary border-0" > Sebetden cixart</button>
+          </div>
+          
+      </div>
+    <div id="alert" class="alert alert-warning d-flex justify-content-center mt-3 " role="alert">
+        Bu kitabdan {{quantity}} eded qalib.
+      </div>
+    <table class="table table-striped mt-3">
+        
+      
+        
+        <tbody>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Xususuyyet:</th>
+                <th scope="col">Aciqlama</th>
+                
+              </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Dil:</td>
+            <td>{{language}}</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Janr:</td>
+            <td>{{genre}}</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Muellif:</td>
+            <td>{{author}}</td>
+           
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Nesriyyat:</td>
+            <td>{{published_at}}</td>
+           
+          </tr>
+        </tbody>
+        <h4 class=" d-flex justify-content-center mt-4">XUSUSIYYETLER</h4>
+      </table>
+      <form action="" method="POST">
+        {{form.csrf_token}}
+        {{render_field(form.full_name)}}
+        {{render_field(form.comment)}}
+        <button type="submit">Submit</button>
+      </form>
+      {%for comment in comments%}
+      <div class="card mb-3 mt-3" style="width: 18rem;">
+        <div class="card-body">
+         Written by <h3 class="card-subtitle mb-2 text-muted">{{comment.full_name}}</h3>
+          <p class="card-text">{{comment.comment}}</p>
+          <h5 class="card-title">{{comment.date_of_comment}}</h5>
+         
+        </div>
+      </div>
+      {%endfor%}
+      
+      
+     
+      
+      
+    </div>
+    <div class="fso d-flex flex-column justify-content-center align-items-center">
+      <h4 class="text-white">Butun kitablar</h4>
+    <div class="slick">
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      <div ><img src="../assets/images/book_slide1.jpeg" alt=""></div>
+      
+      
+    </div>
+
+          
+    
+    </div>
+    <div id="sebetalert" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bildiri</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Mehsul sebete elave edildi.</p>
+          </div>
+          <div class="modal-footer">
+            <button id="alertclosebutton" type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Bagla</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+    {%block js%}
+    <script src="{{url_for("static",filename="js/day.js") }}"></script>
+    <script src="https://kit.fontawesome.com/6c25bdee72.js" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="{{url_for("static",filename="slick/slick.min.js")}}"></script>
+<script>
+  $(document).ready(function(){
+    $('.slick').slick({
+      infinite: true,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      centerPadding: '60px'
+    });
+  });
+</script>
+{%endblock%}
+</body>
+</html>
